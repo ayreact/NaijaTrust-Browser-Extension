@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NaijaTrust Scanner</title>
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css" integrity="sha512-2bBQCjcnw658Lho4nlXJcc6WkV/UxpE/sAokbXPxQNGqmNdQrWqtw26Ns9kFF/yG792pKR1Sx8/Y1Lf1XN4GKA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Font Awesome 6 CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="header flex">
+    <h2><img src="icons/icon48.png" alt="NaijaTrust Logo">NaijaTrust Scanner</h2>
+	<a class="btn btn-primary-custom btn-sm p-2" href="https://naijatrust.vercel.app" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+  </div>
+
+  <div class="container-fluid flex-grow-1">
+    <div id="status" class="alert alert-info text-center" role="alert">
+      <i class="fas fa-spinner fa-spin status-icon"></i>Loading scan results...
+    </div>
+
+    <div id="result" style="display:none;">
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fas fa-link me-2"></i>Current URL
+        </div>
+        <div class="card-body py-2">
+          <p class="card-text text-truncate" id="url" title="Loading..."></p>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fas fa-shield-alt me-2"></i>Security Assessment
+        </div>
+        <div class="card-body py-2">
+          <div class="scan-details-grid">
+            <div class="detail-item">
+              <span class="detail-label">Safety Status</span>
+              <span class="detail-value" id="safety"></span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Risk Score</span>
+              <span class="detail-value" id="risk"></span>
+            </div>
+          </div>
+          <div class="risk-meter mt-2">
+            <div id="riskFill" class="risk-fill"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <span><i class="fas fa-robot me-2"></i>AI Analysis</span>
+          <small class="text-secondary" id="scanTime"></small>
+        </div>
+        <div class="card-body py-2">
+          <pre id="summary" class="mb-2"></pre>
+          <div class="data-collected" id="dataCollected"></div>
+        </div>
+      </div>
+    </div>
+
+    <button id="scanCurrentPage" class="btn btn-primary-custom w-100 mt-3" style="display:none;">
+        <i class="fas fa-sync-alt me-2"></i>Scan Current Page
+    </button>
+  </div>
+
+  <div class="footer">
+    <button id="visitNaijaTrust" class="btn btn-primary-custom btn-sm w-75">
+      <i class="fas fa-external-link-alt me-2"></i>Visit NaijaTrust Website
+    </button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
