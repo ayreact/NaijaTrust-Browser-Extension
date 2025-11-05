@@ -1,14 +1,17 @@
 :root {
-	--primary-bg: #00052b;
-  	--secondary-bg: #00031f;
-    --card-bg: #00073d;
-    --accent-color: #007bff;
-    --safe-color: #28a745;
-    --warning-color: #ffc107;
-    --danger-color: #dc3545;
-    --text-primary: #e0e0e0;
-    --text-secondary: #a0a0a0;
-    --border-color: #1a1a3a;
+  --primary-bg: #ffffff;
+  --secondary-bg: #f5f7fa;
+  --card-bg: #ffffff;
+  
+  --accent-color: #3b82f6;
+  --safe-color: #16a34a;
+  --warning-color: #eab308;
+  --danger-color: #dc2626;
+
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+
+  --border-color: #e2e8f0;
 }
 
 body {
@@ -35,10 +38,9 @@ body::-webkit-scrollbar {
     }
 
     .header {
-      background: linear-gradient(135deg, var(--secondary-bg) 0%, #00094d 100%);
+      background: #00094d;
       color: #ffffff;
       padding: 12px 15px;
-      border-bottom: 1px solid var(--border-color);
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -51,6 +53,7 @@ body::-webkit-scrollbar {
       font-weight: 600;
       display: flex;
       align-items: center;
+	color: #fff;
     }
 
     .header h2 img {
@@ -61,7 +64,7 @@ body::-webkit-scrollbar {
 
     .footer {
       background-color: var(--secondary-bg);
-      padding: 12px 15px;
+      padding: 8px 15px;
       border-top: 1px solid var(--border-color);
       text-align: center;
     }
@@ -76,10 +79,10 @@ body::-webkit-scrollbar {
     }
 
     .card-header {
-      background-color: #00094d;
+      background-color: #f1f5f9;
       border-bottom: 1px solid var(--border-color);
       font-weight: 600;
-      color: #ffffff;
+      color: #00094d;
       padding: 10px 15px;
       border-radius: 8px 8px 0 0 !important;
     }
@@ -96,7 +99,7 @@ body::-webkit-scrollbar {
       overflow-y: auto;
       white-space: pre-wrap;
       word-break: break-word;
-      background-color: #000420;
+      background-color: #f8fafc;
       border: 1px solid var(--border-color);
       padding: 12px;
       border-radius: 6px;
@@ -105,19 +108,13 @@ body::-webkit-scrollbar {
     }
 
     .btn-primary-custom {
-      background: linear-gradient(135deg, var(--accent-color) 0%, #0056b3 100%);
+      background: linear-gradient(135deg, #3b82f6 0%, #00094d 100%);
       border: none;
       color: #fff;
       font-weight: 500;
       padding: 8px 16px;
-      border-radius: 6px;
-      transition: all 0.3s ease;
-    }
-
-    .btn-primary-custom:hover {
-      background: linear-gradient(135deg, #0056b3 0%, #004085 100%);
-      transform: translateY(-1px);
-      box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+      border-radius: 4px;
+		font-size: 0.8rem;
     }
 
     .alert {
@@ -135,13 +132,13 @@ body::-webkit-scrollbar {
       height: 8px;
       background-color: #2d3748;
       border-radius: 4px;
+	  overflow: hidden;
       margin-top: 5px;
       overflow: hidden;
     }
 
     .risk-fill {
       height: 100%;
-      border-radius: 4px;
       transition: width 0.5s ease;
     }
 
@@ -152,7 +149,7 @@ body::-webkit-scrollbar {
     .data-tag {
       display: inline-block;
       background-color: rgba(0, 123, 255, 0.2);
-      color: #90cdf4;
+      color: #00094d;
       padding: 2px 8px;
       border-radius: 12px;
       font-size: 0.75em;
@@ -186,12 +183,12 @@ body::-webkit-scrollbar {
     }
 
     #summary::-webkit-scrollbar-track {
-      background: #00031f;
+      background: #e2e8f0;
       border-radius: 3px;
     }
 
     #summary::-webkit-scrollbar-thumb {
-      background: #007bff;
+      background: var(--accent-color);
       border-radius: 3px;
     }
 
