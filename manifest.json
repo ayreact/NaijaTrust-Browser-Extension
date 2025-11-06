@@ -3,7 +3,7 @@
   "name": "NaijaTrust Web Scanner",
   "version": "1.0",
   "description": "Scans and analyzes websites for safety and privacy info",
-  "permissions": ["activeTab", "scripting", "storage", "tabs"], <!-- ADD "tabs" HERE -->
+  "permissions": ["activeTab", "scripting", "storage", "tabs"],
   "host_permissions": ["https://naijatrust-webscanner.onrender.com/*"],
   "background": {
     "service_worker": "background.js"
